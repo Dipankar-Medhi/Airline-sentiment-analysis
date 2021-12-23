@@ -2,14 +2,12 @@ FROM python:latest
 
 WORKDIR /app
 
-COPY requirements.txt /app/requirements.txt
+COPY ./requirements.txt /app/requirements.txt
 
 RUN pip install -r requirements.txt
 
-EXPOSE 8501
-
 COPY . /app
 
-ENTRYPOINT [ "streamlit", "run" ]
+EXPOSE 8501
 
-CMD [ "project.py" ]
+CMD streamlit run project.py
