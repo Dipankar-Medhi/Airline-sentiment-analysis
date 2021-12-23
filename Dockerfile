@@ -1,0 +1,15 @@
+FROM python:latest
+
+WORKDIR /app
+
+COPY requirements.txt /app/requirements.txt
+
+RUN pip install -r requirements.txt
+
+EXPOSE 8501
+
+COPY . /app
+
+ENTRYPOINT [ "streamlit", "run" ]
+
+CMD [ "project.py" ]

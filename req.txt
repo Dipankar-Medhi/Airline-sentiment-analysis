@@ -1,0 +1,6 @@
+Package    Version
+---------- -------
+-ip        20.2.3
+fonttools  4.28.3
+pip        20.2.3
+setuptools 49.2.1
